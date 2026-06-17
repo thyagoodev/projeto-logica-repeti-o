@@ -16,7 +16,8 @@ const divContAcum = document.querySelector('#div-cont-acum')
 let cont = 0
 let acum = 0.0
 
-bitNum.addEventListener('click' , (evt)=>{
+
+bitNum.addEventListener('click' ), (evt)=>{
     let numDigitado = Number (inputNum.value)
 
     cont++
