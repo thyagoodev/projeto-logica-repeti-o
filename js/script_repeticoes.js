@@ -1,11 +1,11 @@
 //ESTRUTURA DE REPETIÇÃO FOR
 const divFor = document.querySelector('#div-for')
 
-for(i = 0;i < 10; i++ ){
-   console.log(i,'Dinheiro')
+for(let i = 0; i < 10; i++){
+   console.log(i, 'Dinheiro')
    divFor.innerHTML += `${i} - Dinheiro <br>`
-
 }
+
 
 //CONTADOR/ACUMULADOR
 const inputNum = document.querySelector('#num')
@@ -15,17 +15,18 @@ const divContAcum = document.querySelector('#div-cont-acum')
 let cont = 0
 let acum = 0.0
 
- btnNum.addEventListener('click', (evt) =>{
-    let numDigitado = Number(inputNum.value)
- 
-    cont ++
-    acum += numDigitado
+btnNum.addEventListener('click', () => {
+   let numDigitado = Number(inputNum.value)
 
- divContAcum.innerHTML = `TOTAL DE NÚMERO DIITADO É: ${cont} <br>
- A SOMA DOS NÚMEROS É: ${acum}`
+   cont++
+   acum += numDigitado
 
- inputNum.value = ''
-} )
+   divContAcum.innerHTML = `TOTAL DE NÚMERO DIGITADO É: ${cont} <br>
+   A SOMA DOS NÚMEROS É: ${acum}`
+
+   inputNum.value = ''
+})
+
 
 //CONTROLANDO FOR
 const inputFrase = document.querySelector('#frase')
@@ -33,28 +34,54 @@ const inputNumRepeticao = document.querySelector('#num-repeticao')
 const btnFrase = document.querySelector('#btn-frase')
 const divFrase = document.querySelector('#div-frase')
 
-btnFrase.addEventListener('click', (evt) =>{
+btnFrase.addEventListener('click', () => {
    let numRepeti = Number(inputNumRepeticao.value)
    let frase = inputFrase.value
 
-   for(i = 0; i < numRepeti; i++){
+   for(let i = 0; i < numRepeti; i++){
       divFrase.innerHTML += `${i + 1} - ${frase} <br>`
    }
 })
-//COLECAO DE DADOS - ARRAY 
+
+
+//COLEÇÃO DE DADOS - ARRAY
 const presentes = ['Boneca', 'Carrinho', 'Quebra-Cabeça', 'Jogo de Tabuleiro', 'Bola']
 
 const divArray = document.querySelector('#div-array')
 
-//divArray.innerHTML = presentes[6]
-
-for(i=0;i < 5;i++ ) {
-    divArray.innerHTML += `${i} - ${presentes[i]} <br>`
-
+for(let i = 0; i < presentes.length; i++){
+   divArray.innerHTML += `${i} - ${presentes[i]} <br>`
 }
+
 
 //FOR IN
 const divForIn = document.querySelector('#div-forin')
 
 for(let posicao in presentes){
- divForIn.innerHTML += ` ${presentes[posicao]} <br>"
+   divForIn.innerHTML += `${presentes[posicao]} <br>`
+}
+
+
+//FOR OF
+const divForOf = document.querySelector('#div-forof')
+
+for(let presente of presentes){
+   divForOf.innerHTML += `${presente} <br>`
+}
+
+
+//FOREACH
+// const divForeach = document.querySelector('#div-foreach')
+
+// presentes.forEach((presente) => {
+//    divForeach.innerHTML += `${presente} <br>`
+// })
+
+//COLECAO DE OBJETOS LITERIAIS - ARRAY
+//const pessoas = [
+//{nome: 'Maria Flor', idade: 25, renda: 8500},
+   // {nome: 'Joerdson Souza', idade: 75, renda: 5000},
+   // {nome: 'Taoca', idade: 28, renda: 500},
+    //{nome: 'Chicó', idade: 36, renda: 100},
+   // {nome: 'João Grilo', idade: 32, renda: 80},
+//]
