@@ -1,3 +1,4 @@
+import {calculoPercentual} from  ',/scripts_calculos.js'
 
 function mensagem(){
     console.log('Uma mensagem')
@@ -46,9 +47,6 @@ const divisaoNum = (valor1, valor2) => {
     return reposta
 }
 
-
-
-
         console.log (divisaoNum(10,0))
 
         console.log (Math.random())
@@ -94,8 +92,17 @@ const divisaoNum = (valor1, valor2) => {
                 clearInterval (sorteio)
                 contVolta = 0
                 numSorteado = 0
-            }
+            }  
         },2000)
+
+        */
+
+       //CHAMANDO A FUNÇÃO DE OUTRO ARQUIVO
+       console.log('CÁLCULO DA FUNÇÃO
+       calculoPercentual DO ARQUIVO scripts_calculos.
+       js--->', calculoPercentual(750))
+
+
 
 
 
